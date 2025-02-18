@@ -57,6 +57,8 @@ namespace sage.challenge.api
             {
                 endpoints.MapControllers();
             });
+            
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
         }
     }
 }
